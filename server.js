@@ -22,7 +22,6 @@ app.get("/", function (req, res) {
 // your first API endpoint... 
 app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
-  console.log(req);
 });
 
 app.get("/api/:date?", (req, res) => {
@@ -30,7 +29,6 @@ app.get("/api/:date?", (req, res) => {
   
   if(!req.params.date) {
     date = new Date();
-    console.log('ran');
   }
 
   if (Number(req.params.date)) {
